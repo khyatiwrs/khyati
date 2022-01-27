@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0px auto;
+    text-align: center;
+}
+div {
+    display: block;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.theme-2 {
+    .hero {
+    background-image: none;
+    overflow-x: visible;
+    overflow-y: visible;
+    margin-bottom: 250px;
+    }
+    .dark {
+        background-color: #0b1075;
+        color: #fff;
+    }
+    .bottom {
+        margin-bottom: 100px;
+    }
+    .hero {
+        padding: 60px;
+        background-repeat: no-repeat;
+        .title {
+            font-size: 37px;
+            font-weight: 600;
+            text-align: center;
+            margin: 60px 0px 30px 0px;
+        }
+        .discription {
+            .details {
+                font-size: 22px;
+                font-weight: 100;
+                text-align: left;
+                line-height: 1.8;
+            }
+        }
+        .image {
+            margin: 100px auto -250px;
+            max-width: 1000px;
+            width: 100%;
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                max-width: initial;
+            }
+        }
+        .lead-image {
+            display: none;
+        }
+    }
+    h2 {
+        font-size: 82px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.4);
+        text-align: left;
+    }
+    h3 {
+        color: #0b1075;
+        font-size: 28px;
+        font-weight: 600;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .before-decoration {
+        position: relative;
+        span {
+            position: relative;
+            z-index: 1;
+        }
+        .icon {
+            position: absolute;
+            top: -10px;
+            left: -18px;
+            z-index: 0;
+        }
+    }
+    .details {
+        font-size: 20px;
+        font-weight: 100;
+        text-align: left;
+        line-height: 1.8;
+    }
+    .gray {
+        background-color: #f7f9fd;
+        background-image: none;
+        padding: 30px 15px;
+    }
+    .project-detail {
+        padding-top: 95px;
+        h3 {
+            color: #ffffff;
+        }
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .block {
+                border-radius: 3px;
+                border: solid 1px #979797;
+                width: calc(50% - 15px);
+                margin-bottom: 30px;
+                padding: 20px 40px;
+                display: flex;
+                flex-direction: column;
+                span {
+                    font-size: 28px;
+                    font-weight: 400;
+                    text-align: left;
+                }
+                p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.theme-2.sellerlift {
+        .key-feature {
+            .feature {
+                display: flex;
+                flex-wrap: wrap;
+                .block-sellerlift {
+                    width: 33%;
+                    padding: 15px;
+                    display: flex;
+                    .left {
+                        margin: 10px;
+                        .icon {
+                            width: 40px;
+                            height: 40px;
+                            svg {
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+                    }
+                    .right {
+                        font-family: "SofiaPro";
+                        font-weight: 100;
+                        font-size: 20px;
+                        color: #666;
+                        line-height: 1.8;
+                        text-align: left;
+                        p{
+                            color: #666;
+                        }
+                        h5 {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+

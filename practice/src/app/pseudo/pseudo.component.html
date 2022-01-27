@@ -1,0 +1,94 @@
+<div class="container">
+    <div>
+      <h2>Reactive form</h2>
+    </div>
+      <div class="basic_form">
+        <form [formGroup]="basicForm" (ngSubmit)="submitForm() " class="f">
+          <div class="normal_form">
+            <div class="name1">
+              <div>
+                <label class="name">Name:</label>
+                <input type="text" placeholder="enter your name" name="fname" formControlName="fname">
+              </div>
+              <div>
+                <span *ngIf="fname && fname.invalid && fname.touched" class="a">enter your name</span>
+              </div>
+            </div>
+            <div class="email1">
+              <div>
+                <label class="email">Email:</label>
+                <input type="text" placeholder="enter your emailid" name="emaill" formControlName="emaill">
+              </div>
+              <div>
+                <div class="email_req">
+                  <span *ngIf="emaill && emaill.invalid && emaill.touched && emaill.hasError('required')" class="b">enter  emailid</span>
+                </div>
+                <div class="email_error">
+                  <span *ngIf="emaill && emaill.invalid && emaill.touched && emaill.hasError('email')" class="b">enter valid emailid</span>
+                </div>
+              </div>
+            </div>
+            <div class="mobile_n1">
+              <div>
+                <label class="mobile_n">M.number:</label>
+                <input type="text" placeholder="enter your mobile number" name="mnumber" formControlName="mnumber">
+              </div>
+              <div class="mnumber_req">
+                <span *ngIf="mnumber && mnumber.invalid && mnumber.touched && mnumber.hasError('required')" class="c">enter phone number</span>
+              </div>
+              <div class="mnumber_error">
+                <span *ngIf="mnumber && mnumber.invalid && mnumber.touched &&  mnumber.hasError('pattern')" class="c">enter valid phone number</span>
+              </div>
+            </div>
+            <div class="age1">
+              <div>
+                <label class="age">Age:</label>
+                <input type="text" placeholder="enter your age" name="agee" formControlName="agee">
+              </div>
+              <div class="age_req">
+                <span *ngIf="agee && agee.invalid && agee.touched && agee.hasError('required')" class="d">enter your age</span>
+              </div>
+              <div class="age_error">
+                <span *ngIf="agee && agee.invalid && agee.touched && agee.hasError('pattern')" class="d">enter your valid age</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form_array">
+            <div formArrayName="address" class="form_add">
+              <div>
+                <label class="form_address">  Address:</label>
+                  <div *ngFor="let add of addForms.controls; let i = index"[formGroupName]="i">
+                    <input type="text" placeholder="address" name="add" formControlName="add">
+                  </div>
+              </div>
+              <div>
+                <button (click)="addAdd()" class="butn">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="form_array2">
+            <div>
+              <label class="marksheet">marksheet</label>
+            </div>
+            <div formArrayName="marks" class="mark">
+              <div *ngFor="let mark of markForms.controls; let i = index"[formGroupName]="i">
+                <label class="subject">subject:</label>
+                <input type="text" placeholder="subject" name="subject" formControlName="subject" class="sub"> 
+                <label class="marks">marks:</label>
+                <input type="text" placeholder="marks" name="mark" formControlName="mark">
+                <button (click)="deleteMarks(i)" *ngIf="markForms.length > 1" class="btn">Delete</button> 
+              </div>         
+              <div>
+                <button (click)="addMark()" class="butn">Add</button>
+              </div>
+            </div>
+          </div>
+          <div>
+           <button class="submit"> submit</button>
+          </div>
+          <div>
+          </div>
+        </form>
+      </div>
+    </div>

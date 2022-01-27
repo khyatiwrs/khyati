@@ -1,0 +1,80 @@
+<!--ng content-->
+
+<div class="row">
+    <div class="body">
+        <div class="col-md-6">
+            <app-login>
+                <h3 class="language">java</h3>
+                <button class="btn">know more about java</button>
+
+            </app-login>
+        </div>
+        <div class="col-md-6">
+            <app-login>
+                <h3 class="language">anguler</h3>
+                <button class="btn">know more about anguler</button>
+
+            </app-login>
+        </div>
+        <div class="col-md-6">
+            <app-login>
+                <h3 class="language">c language</h3>
+                <button class="btn">knoe more about c </button>
+
+            </app-login>
+        </div>
+        <div class="col-md-6">
+            <app-login>
+                <h3 class="language">python</h3>
+                <button class="btn">know more about puthon</button>
+
+            </app-login>
+        </div>
+    </div>
+</div>
+
+
+
+<!--ng container-->
+<div class="container">
+    
+    <ng-container *ngIf="ststus">
+        <div *ngFor="let item of container">
+            {{item.name}}
+        </div>
+    
+    </ng-container>
+</div>
+
+<!--ng templet-->
+
+<ng-template [ngIf]="display">
+    ng template is runing
+</ng-template>
+
+<div [ngSwitch]="'khyati'">
+    <ng-template [ngSwitchCase]="'khyati'">
+        <p>name is khyati</p>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'bhavin'">
+        <p>name is bhavin</p>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'hemal'">
+        <p>name is hemal</p>
+    </ng-template>
+</div>
+
+<div *ngIf="adminRole; else notAdmin">
+    user is an admin
+</div>
+<ng-template #notAdmin>
+    user is not admin
+</ng-template>
+
+<!--pipes-->
+<h2>{{title | uppercase}}</h2>
+<h2>{{title | lowercase}}</h2>
+<h2>{{info.dob | date :'short'}}</h2>
+<h2>{{info | json}}</h2>
+<h2>{{info.numbers | currency:'USD':'symbol'}}</h2>
+<h2>{{002.23000 | number : '1.2-3'}}</h2>

@@ -1,0 +1,170 @@
+.container{
+    background-color: skyblue;
+    justify-content: center;
+    align-items: center;
+
+}
+.normal_form{
+    margin-left: 410px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    input{
+        border-radius: 5px;
+        width: 300px;
+        height: 30px;
+        font-size: 15px;
+        border: none;
+        position: relative;
+    }
+        input::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top:1px solid rgb(83, 61, 61);
+        
+        }
+    
+    .name1{
+        margin-bottom: 20px;
+        .name{
+            color: teal;
+            margin-right: 65px;
+        }
+        span{
+            margin-left:90px ;
+            color: red;
+        }
+    }
+    .email1{
+        margin-bottom: 20px;
+        .email{
+            color: teal;
+            margin-right: 65px;
+        }
+        span{
+            margin-left:90px ;
+            color: red;
+        }
+    }
+    .mobile_n1{
+        margin-bottom: 20px;
+        .mobile_n{
+            color: teal;
+            margin-right: 30px;
+        }
+        span{
+            margin-left:120px ;
+            color: red;
+        }
+    }
+    .age1{
+        margin-bottom: 20px;
+        .age{
+            color: teal;
+            margin-right: 80px;
+        }
+        span{
+            margin-left:120px ;
+            color: red;
+        }
+    }
+}
+.form_array{
+    margin-left: 410px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    .form_add{
+        .form_address{
+            color: teal;
+            margin-bottom: 20px;
+        }
+        input{
+            border-radius: 5px;
+            width: 300px;
+            height: 30px;
+            font-size: 15px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+                transform: scale(2);
+                opacity: 1;
+                transition: 0.5s;
+            
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-bottom: 20px;
+            background-color: rgb(3, 128, 24);
+        }
+    }
+}
+.form_array2{
+    margin-left: 410px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    .marksheet{
+        color: teal;
+        margin-bottom: 30px;
+    }
+    mark{
+        display: flex;
+    }
+    label{
+        color: teal;
+        margin-right: 30px;  
+    }
+    input{
+        border-radius: 5px;
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+        margin-bottom: 15px;
+        margin-right: 30px;
+    }
+    .btn{
+        width: 80px;
+        height: 30px;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 15px;
+        margin-bottom: 20px;
+        background-color: red;
+        color: white;
+    }
+    .butn{
+        width: 80px;
+        height: 30px;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 15px;
+        margin-bottom: 20px;
+        background-color: green;
+    }
+}
+.submit{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 20px;
+    background-color: rgb(39, 12, 75);
+    margin-left: 45%;
+    color: white;
+}

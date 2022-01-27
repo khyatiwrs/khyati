@@ -1,0 +1,119 @@
+
+
+<div class="row">
+    <div class="body">
+    <div class="col-md-6">
+        <div class="language">
+            <div class="languag_body">
+                <h4>language you know</h4>
+                <ng-content select=".language"></ng-content>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi porro dolorem recusandae exercitationem distinctio rerum!</p>
+                <ng-content select=".btn"></ng-content>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<ul>
+  <li *ngFor="let contect of contectList">
+      {{contect.contectName}}
+  </li>
+</ul>
+
+
+
+
+
+
+
+<!--ngclass using string-->
+<!--<div [ngClass]="'one'">
+  ng class using string</div>-->
+<!--ngclass using array-->
+<!--<div [ngClass]="[clsName, clsName2]">
+  dynamically use  class using array</div>-->
+<!--ngclass using expression-->
+  <!--<div [ngClass]="{'one':true, 'three':false}">
+ngclass using expression</div>
+  -->
+
+<!--ngif-->
+<!--<div style="background-color:aquamarine;" *ngIf="success_msg">
+  if condition run successfully</div>-->
+<!--ngif with OR condition-->
+  <!--<div *ngIf="success_msg || success_msge">
+    with or condition</div>-->
+<!--ngif with NOT condition-->
+    <!--<div *ngIf="!success_msge">
+using not operator</div>-->
+<!--ngif else condition-->
+<!--<div *ngIf="success_msge; else error_msg">
+using else condition</div>
+
+<ng-template #error_msg>
+  there is some problem!!</ng-template>
+  <br>-->
+<!--ngif then else condition-->
+ <!-- <div *ngIf="success_msg; then updated_msg; else error_msg">
+    using else condition</div>
+
+     <ng-template #updated_msg>
+      updated.</ng-template>
+    <ng-template #error_msg>
+      there is some problem!!</ng-template>-->
+
+<!--ngFor-->
+<!--<ul>
+  <li *ngFor="let list of name">
+    {{ list }}
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let contact of contacts">
+    {{ contact.firstName }} {{ contact.lastName }}
+  </li>
+</ul>-->
+<!--print index also-->
+<!--<ul>
+  <li *ngFor="let contact of contacts; index as i">
+   {{i}} {{ contact.firstName }} {{ contact.lastName }}
+  </li>
+</ul>-->
+
+<!--reactive form-->
+
+<!--<h1>Reactive form</h1>
+<form [formGroup]="basicForm" (ngSubmit)="submitForm()">
+  <div class="name1">
+  <label class="name">Name:</label>
+  <input type="text" placeholder="enter your name" name="fname" formControlName="fname">
+  </div>
+  <div class="email1">
+  <label class="email">Email:</label>
+  <input type="text" placeholder="enter your emailid" name="emaill" formControlName="emaill">
+  </div>
+  <div class="mn1">
+  <label class="mn">M.number:</label>
+  <input type="text" placeholder="enter your mobile number" name="mnumber" formControlName="mnumber">
+  </div>
+  <div class="age1">
+  <label class="age">Age:</label>
+  <input type="text" placeholder="enter your age" name="agee" formControlName="agee">
+  </div>
+  <div class="gender1">
+    <label class="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" formControlName="gender"> 
+    <label>Male</label>
+    <input type="radio" id="Female" name="gender" formControlName="gender" >
+    <label>Female</label>
+ 
+  </div>-->
+  <!--
+  <input type="text" placeholder="enter subject name" name="sublect" formControlName="subject">
+  <input type="text" placeholder="enter subject marks" name="mark" formControlName="mark">
+-->
+  <!--<div>
+    <button>submit</button>
+  </div>
+
+</form>-->

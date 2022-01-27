@@ -1,0 +1,72 @@
+.one{
+    color:blue;
+
+}
+.two{
+    color:red;
+}
+
+
+
+.three{
+    background-color:lightgray;
+}
+
+
+.name{
+    color: blue;
+    margin-right: 60px;
+}
+.email{
+    color: blue;
+    margin-right: 60px;
+}
+.email1{
+    margin-top: 20px;
+}
+.mn{
+    color: blue;
+    margin-right: 30px;
+}
+.mn1{
+    margin-top: 22px;
+}
+.age{
+    color: blue;
+    margin-right: 70px;   
+}
+.age1{
+    margin-top: 20px;
+}
+.gender{
+    color: blue;
+    margin-right: 30px;   
+
+}
+    .gender1{
+        margin-top: 20px;
+    }
+
+button{
+    margin-top: 20px;
+    border-radius: 25px;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+.aaa{
+    margin-top: 20px;
+}
+.aab{
+    margin-right: 20px;
+}
+.mark{
+    margin-top: 20px;
+}
+.sub{
+    margin-right: 40px;
+}
+.btn{
+
+}
