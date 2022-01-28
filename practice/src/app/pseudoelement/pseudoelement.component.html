@@ -20,20 +20,99 @@
         </ul>
     </div>
     <div class="first_ch">
-        <ul class="ul">
-        <li class="li">khyati</li>
-        <li class="li">bhavin</li>
-        <li class="li">hemal</li>
-        <li class="li">harshil</li>
-        <li class="li">hardik</li>
-    </ul>
-    <ul class="ul">
-        <li class="li">java</li>
-        <li class="li">advancejava</li>
-        <li class="li">anguler</li>
-        <li class="li">python</li>
-        <li class="li">c++</li>
-    </ul>
+        <div>
+            <ul class="ul">
+                <li class="li">khyati</li>
+                <li class="li">bhavin</li>
+                <li class="li">hemal</li>
+                <li class="li">harshil</li>
+                <li class="li">hardik</li>
+            </ul>
+        </div>
     </div>
+    <div class="n_child">
+        <ul class="ul">
+            <li class="li">java</li>
+            <li class="li">advancejava</li>
+            <li class="li">anguler</li>
+            <li class="li">python</li>
+            <li class="li">c++</li>
+            <li class="li">c</li>
+        </ul>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nobis doloremque provident impedit enim aliquid, inventore tempore dolores et voluptate.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet alias porro sunt eum magnam cupiditate!
+        </p>
+    </div>
+    <div></div>
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, neque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, ipsum omnis sequi ex aperiam sit!</p>
+    </div>
+    <div class="only_child">
+        <ul class="ul">
+            <li class="li">only child</li>
+        </ul>
+    </div>
+    <div class="use_lang">
+        <h2 lang="en">hello everyone</h2>
+        <h2 lang="fr">hello everyone</h2>
+        <h2 lang="de">hello everyone</h2>
+    </div>
+
+    <form [formGroup]="signupForm" (ngSubmit)="userSignUp()">
+        <div style="text-align: center">
+          <h1> form</h1>
+        </div>
+        <div class="form-group" style="margin-right: 200px; margin-left: 200px;margin-bottom: 20px;">
+          <div class="my-1 form-control">
+              <label>Name:</label>
+               <input class="input1" type="text" formControlName="name" required />
+            </div>
+        </div>
+        <div class="form-group" style="margin-right: 200px; margin-left: 200px;margin-bottom: 20px;">
+            <div class="my-1 form-control">
+                <label>Lname:</label> 
+                <input class="input1" type="text" formControlName="lastname" value="readonly" readonly></div>
+          </div>
+        <div class="form-group" style="margin-right: 200px; margin-left: 200px;margin-bottom: 20px;">
+          <div class="my-1 form-control">
+              <label>Email:</label> 
+              <input class="input1" type="email" formControlName="email" required /></div>
+        </div>
+    
+        <div class="form-group" style="margin-right: 200px; margin-left: 200px;margin-bottom: 20px;">
+          <div class="my-1 form-control">
+              <label>Age:</label>
+               <input class="input1" type="text" formControlName="age" required pattern /></div>
+        </div>
+        
+        <div class="form-group" style="margin-right: 200px; margin-left: 200px;margin-bottom: 20px;">
+         <label> Gender:</label>
+          <input type="radio" value="male" checked formControlName="gender" /><label>Male</label> 
+          <input type="radio" value="female" formControlName="gender" /> <label>Female</label>
+        </div>
+        <div class="form-group" style="margin-right: 200px; margin-left: 200;margin-bottom: 20px;">
+          <button type="submit" class="btn btn-primary my-1"> submit</button>
+        </div>
+
+        <div class="target">
+            <ul>
+                <li><a class="subject" href="#html">html</a></li>
+                <li><a class="subject" href="#css">css</a></li>
+                <li><a class="subject" href="#js">js</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 id="html">html: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, laudantium!</h4>
+            <h4 id="css">css: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quo.</h4>
+            <h4 id="js">js: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, sequi?</h4>
+        </div>
+        
+      </form>
 </body>
 </html>
