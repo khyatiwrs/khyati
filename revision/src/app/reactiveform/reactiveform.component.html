@@ -1,0 +1,70 @@
+<div class="container1">
+<form [formGroup]="registration" (ngSubmit)="onSubmit()" class="formgroup">
+  <div class="container">
+      <div class="heading">
+          <h1> Registration Form</h1>
+      </div>
+      <div class="formcontrol">
+          <label>FirstName: </label> <input type="text" formControlName = "firstName">
+          <span *ngIf="fname && fname.invalid && (fname.dirty || fname.touched)" class="error">
+              <span *ngIf="fname.errors?.['required']; then Required ; else Invalid"></span>
+              <ng-template #Required>
+                  Reuired field
+              </ng-template>
+              <ng-template #Invalid>
+                  Invalid value 
+              </ng-template>
+          </span>
+      </div>
+   
+      <div class="formcontrol">
+          <label>Email: </label> <input type="email" formControlName = "email">
+          <span *ngIf="email && email.invalid && (email.dirty || email.touched)" class="error">
+              <span *ngIf="email.errors?.['required']; then Required ; else Invalid"></span>
+              <ng-template #Required>
+                  Reuired field
+              </ng-template>
+              <ng-template #Invalid>
+                  Invalid value 
+              </ng-template>
+          </span>
+      </div>
+      <div class="formcontrol">
+        <label>Phone number: </label> <input type="text" formControlName = "phone_number">
+        <span *ngIf="pnumber && pnumber.invalid && (pnumber.dirty || pnumber.touched)" class="error">
+            <span *ngIf="pnumber.errors?.['required']; then Required ; else Invalid"></span>
+            <ng-template #Required>
+                Reuired field
+            </ng-template>
+            <ng-template #Invalid>
+                Invalid value 
+            </ng-template>
+        </span>
+    </div>
+      <div class="formcontrol">
+          <label>Gender: </label> 
+          <input type="radio" value="Male" formControlName = "gender">Male
+          <input type="radio" value="Female"formControlName = "gender">Female
+      </div>
+      <div class="formcontrol">
+        <div formArrayName="address" class="addresses">
+          <div>
+            <label class="address">  Address:</label>
+              <div *ngFor="let add of addForms.controls; let i = index"[formGroupName]="i">
+                <input type="text" placeholder="address" name="add" formControlName="add" class="add">
+              </div>
+          </div>
+          <div>
+            <button (click)="addAdd()" class="butn">Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="formcontrol">
+          <input [disabled]="registration.invalid" class="btn" type="submit">
+      </div>
+          
+      <hr>
+      <div class="display">{{registration.value | json}}</div>
+  </div>
+</form>
+</div>
