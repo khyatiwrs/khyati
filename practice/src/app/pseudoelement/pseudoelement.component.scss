@@ -176,9 +176,11 @@ div{
             width: 20px;
             height: 20px;
         }
-        &:checked + label {
+        &:checked{
+        & + label {
             color: rgb(8, 8, 75);
         }
+    }
         
         &:read-only{
             background-color: rgb(250, 250, 170);
@@ -207,6 +209,9 @@ div{
         margin-left: 400px;
 
     }
+    h2{
+        background-color: lightgreen;
+    }
     .target{
         margin-top: 20px;
         .subject{
@@ -218,5 +223,82 @@ div{
     h4{
         &:target{
             color: cadetblue;
+        }
+    }
+    .atribute{
+        h1[class]{
+            color: cadetblue;
+        }
+        h1[class= "abc"]{
+            background-color: rgb(160, 100, 184);
+        }
+        h1[class^= "abc"]{
+            border: 1px solid red;
+        }
+        h1[class*= "abc"]{
+            font-style: italic;
+        }
+
+    }
+    .atribute1{
+        h1[class$="12"]{
+            color: cornflowerblue;
+        }
+        h1[class~="abc"]{
+            background-color: crimson;
+        }
+    }
+    .combinator {
+        p{
+            color: darkcyan;
+        }
+    }
+    div{
+        p{
+            span{
+                color: green;
+            }
+        }
+    }
+    .a123{
+        color: red;
+    }
+    .a123{
+
+        & > ul{
+        color: green;
+        }
+    }
+    .sibiling_selector{
+        h4{
+            &+h4{
+                color: hotpink;
+            }
+        } 
+    }
+    .general_sibiling{
+        ul{
+            &~h4{
+                color: red;
+            }
+        }
+        h5{
+            font-size: 20px;
+            &~h4{
+                color: rgb(42, 20, 121);
+            }
+        }
+    }
+    .simple_selector{
+        #abc{
+            color: lightseagreen;
+        }
+        .abc1{
+            color: lightseagreen;
+        }
+        span{
+            h3{
+                color: lightskyblue;
+            }
         }
     }
