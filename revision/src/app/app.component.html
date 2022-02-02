@@ -1,46 +1,11 @@
-<div [ngClass]="'one'">
-  ng class using string</div>
- <!--<div [ngClass]="[clsName, clsName2]">
-  dynamically use  class using array</div>
-  <div [ngClass]="{'one':true, 'three':false}">
-ngclass using expression</div>
+<div class="navbar">
+  <ul class="component">
+    <li> <a routerLink="/basic" routerLinkActive="active" class="basic_component">basic</a></li>
+    <li>  <a routerLink="/reactiveform" routerLinkActive="active" class="reactive_component" > reactiveform</a></li>
+    <li>  <a routerLink="/service" routerLinkActive="active" class="service_component" > service</a></li>
+    <li>  <a routerLink="/aboutus" routerLinkActive="active" class="aboutus_component" > aboutus</a></li>
+  </ul>
+</div>
 
-<div style="background-color:aquamarine;" *ngIf="success_msg">
-  if condition run successfully</div>
-  <div *ngIf="success_msg || success_msge">
-    with or condition</div>
-    <div *ngIf="!success_msge">
-using not operator</div>
-<div *ngIf="success_msge; else error_msg">
-using else condition</div>
 
-<ng-template #error_msg>
-  there is some problem!!</ng-template>
-  <br>
-  <div *ngIf="success_msg; then updated_msg; else error_msg">
-    using else condition</div>
-
-     <ng-template #updated_msg>
-      updated.</ng-template>
-    <ng-template #error_msg>
-      there is some problem!!</ng-template>
-
-<ul>
-  <li *ngFor="let list of name">
-    {{ list }}
-  </li>
-</ul>
-<ul>
-  <li *ngFor="let contact of contacts">
-    {{ contact.firstName }} {{ contact.lastName }}
-  </li>
-</ul>
-
-<ul>
-  <li *ngFor="let contact of contacts; index as i">
-   {{i}} {{ contact.firstName }} {{ contact.lastName }}
-  </li>
-</ul> -->
-
-<app-reactiveform></app-reactiveform>
-
+<router-outlet></router-outlet>

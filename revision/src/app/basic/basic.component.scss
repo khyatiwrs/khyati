@@ -1,0 +1,33 @@
+h1{
+    background-color: mediumaquamarine;
+    color: rgb(29, 2, 63);
+}
+.one{
+    color: rgb(48, 21, 146);
+    font-size: 20px;
+}
+.two{
+    background-color: rgb(122, 234, 238);
+}
+.three{
+    color: hotpink;
+}
+.boxx {
+    width: 350px;
+    height: 350px;
+    margin: 2px;
+    text-align: center;
+    .after {
+        width: 200px;
+        height: 70px;
+        border: 1px solid black;
+        margin: 3%;
+        &:hover {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 200px;
+            height: 20px;
+        }
+    }
+}

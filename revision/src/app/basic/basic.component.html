@@ -1,0 +1,93 @@
+
+<div>
+    <div>
+      <h1>ng class</h1>
+    </div>
+    <div [ngClass]="'one'">
+      ng class using string
+    </div>
+    <div [ngClass]="[clsName, clsName2]">
+      dynamically use  class using array</div>
+    <div [ngClass]="{'one':true, 'three':false}">
+    ngclass using expression</div>
+  </div>
+  
+  <div class="ngif">
+    <div>
+      <h1>ng if </h1>
+    </div>
+    <div style="background-color:rgb(245, 135, 181); font-size: 20px;" *ngIf="success_msg">
+      if condition run successfully</div>
+    <div style="color: cadetblue;font-size: 20px;" *ngIf="success_msg || success_msge">
+      with or condition</div>
+    <div style="color:rgb(236, 136, 153);font-size: 20px ;" *ngIf="!success_msge">
+      using not operator</div>
+    <div  style="color: cadetblue;font-size: 20px;" *ngIf="success_msge; else error_msg">
+      using else condition</div>
+    <ng-template  #error_msg>
+      there is some problem!!</ng-template>
+  </div>
+  <div class="ngfor">
+    <div>
+      <h1>ng for</h1>
+    </div>
+    <div>
+      <ul>
+        <li *ngFor="let list of name">
+          {{ list.firstname }}
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li *ngFor="let contact of name; index as i">
+          {{i}} {{ contact.firstname }} {{ contact.lastname }}
+        </li>
+      </ul> 
+    </div>
+  </div>
+  <div class="ng_container">
+    <div>
+      <h1>ng container</h1>
+    </div>
+    <div class="container">
+      <ng-container *ngIf="ststus">
+          <div *ngFor="let item of container">
+              {{item.name}}
+          </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="ng_template">
+    <div>
+      <h1>ng template</h1>
+    </div>
+      <ng-template [ngIf]="display">
+        ng template is runing
+      </ng-template>
+      <div [ngSwitch]="'java'">
+        <ng-template [ngSwitchCase]="'anguler'">
+            <p>anguler</p>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'java'">
+            <p>java</p>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'python'">
+            <p>python</p>
+        </ng-template>
+    </div>
+  </div>
+  <div class="pipes">
+    <div>
+      <h1>pipes</h1>
+    </div>
+      <h3>{{Title | uppercase}}</h3>
+      <h3>{{Title | lowercase}}</h3>
+      <h3>{{info.dob | date :'medium'}}</h3>
+      <h3>{{info | json}}</h3>
+      <h3>{{info.numbers | currency:'INR':'symbol'}}</h3>
+      <h3>{{0023.33400 | number : '3.2-4'}}</h3>
+  </div>
+  <div class="boxx">
+    <div class="after">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia deleniti alias harum rem accusantium voluptatum.</div>
+</div>

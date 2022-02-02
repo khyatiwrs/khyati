@@ -1,0 +1,36 @@
+<div class="container1">
+    <form [formGroup]="login" (ngSubmit)="onSubmit()" class="formgroup">
+      <div class="container">
+          <div class="heading">
+              <h1> Registration Form</h1>
+          </div>
+          <div class="formcontrol">
+              <label>UserName: </label> <input type="text" formControlName = "userName">
+              <span *ngIf="uname && uname.invalid && (uname.dirty || uname.touched)" class="error">
+                  <span *ngIf="uname.errors?.['required']; then Required ; else Invalid"></span>
+                  <ng-template #Required>
+                      Reuired field
+                  </ng-template>
+                  <ng-template #Invalid>
+                      Invalid value 
+                  </ng-template>
+              </span>
+          </div>
+          <div class="formcontrol">
+            <label>Password: </label> <input type="text" formControlName = "password">
+            <span *ngIf="password && password.invalid && (password.dirty || password.touched)" class="error">
+                <span *ngIf="password.errors?.['required']; then Required ; else Invalid"></span>
+                <ng-template #Required>
+                    Reuired field
+                </ng-template>
+                <ng-template #Invalid>
+                    Invalid value 
+                </ng-template>
+            </span>
+          </div>
+            <div class="formcontrol">
+                <button class="btun">login</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -46,6 +46,8 @@ export class ReactiveformComponent implements OnInit {
   }
   addAdd(){
     this.addForms.push(this.addAdds());
-  
+  }
+  deleteadd(i: number){
+    this.addForms.removeAt(i)
   }
 }

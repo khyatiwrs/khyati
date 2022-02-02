@@ -52,6 +52,8 @@
             <label class="address">  Address:</label>
               <div *ngFor="let add of addForms.controls; let i = index"[formGroupName]="i">
                 <input type="text" placeholder="address" name="add" formControlName="add" class="add">
+                <button  (click)="deleteadd(i)" *ngIf="addForms.length > 1" class="btn">Delete</button> 
+
               </div>
           </div>
           <div>
@@ -60,11 +62,15 @@
         </div>
       </div>
       <div class="formcontrol">
-          <input [disabled]="registration.invalid" class="btn" type="submit">
+          <input  class="btun" type="submit">
       </div>
-          
+      <div class="display">
+         Registered?
+        <a routerLink='/login' routerLinkActive="active">Login</a>
+    </div>
       <hr>
       <div class="display">{{registration.value | json}}</div>
   </div>
 </form>
+<router-outlet></router-outlet>
 </div>

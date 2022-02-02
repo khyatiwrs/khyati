@@ -1,0 +1,18 @@
+{
+  "data":[{
+    "name":"khyati",
+    "email":"abc@gmail.com",
+    "age":23
+  },
+  {
+    "name":"bhavin",
+    "email":"abcd@gmail.com",
+    "age":23
+  },
+  {
+    "name":"hemal",
+    "email":"abce@gmail.com",
+    "age":23
+  }
+]
+}
